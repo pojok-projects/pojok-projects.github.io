@@ -1,2 +1,2 @@
-# pojok-projects.github.io
-Websote of pojokan.io
+# pojokanio-website
+Website of pojokan.io
