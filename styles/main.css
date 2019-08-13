@@ -15,6 +15,11 @@
   .navbar:not(.top-nav-collapse) {
     background: #3949ab !important;
   }
+
+  #logo-pojokan {
+    margin: 0 auto;
+    width: 150px;
+  }
 }
 
 #intro .h6 {
@@ -24,7 +29,11 @@
 
 .hm-gradient .full-bg-img {
   background: rgba(42, 27, 161, 0.7);
-  background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(42, 27, 161, 0.7),
+    rgba(29, 210, 177, 0.7) 100%
+  );
 }
 
 @media (max-width: 450px) {
