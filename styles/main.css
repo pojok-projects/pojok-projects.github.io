@@ -54,3 +54,7 @@
 #pricing ul li {
   font-size: 1.1em;
 }
+
+strong, b {
+  font-weight: bold !important;
+}
