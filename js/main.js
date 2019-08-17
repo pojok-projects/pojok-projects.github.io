@@ -18,6 +18,11 @@ const getUrlVars = () => {
 };
 
 const sanitiseHash = href => href.match(/#/g) ? href.slice(0, href.indexOf('#')) : href;
+const getFirstAnchor = href => {
+    const anchor = href.slice(href.indexOf('#') + 1);
+    console.log(href, 'href');
+    return anchor.match('#') ? getFirstAnchor(anchor) : `#${anchor}`;
+}
 
 (() => {
     appendScript('/js/jquery-3.2.1.min.js');
@@ -44,7 +49,7 @@ const sanitiseHash = href => href.match(/#/g) ? href.slice(0, href.indexOf('#'))
             $(() => {
                 const includes = $('[data-include]'),
                     lang = getUrlVars().lang,
-                    excludes = ['footer', 'navbar', 'scripts', 'styles'];
+                    excludes = ['footer', 'navbar'];
 
                 jQuery.each(includes, function () {
                     const include = $(this).data('include'),
@@ -54,7 +59,8 @@ const sanitiseHash = href => href.match(/#/g) ? href.slice(0, href.indexOf('#'))
                             $('a').each(function () {
                                 const href = $(this).attr('href');
                                 if (href) {
-                                    const anchor = href.match('#') ? '#' + href.slice(href.indexOf('#') + 1) : null;
+                                    const anchor = href.match('#') ? getFirstAnchor(href) : null;
+                                    console.log(anchor, 'anchorresult');
                                     let main = sanitiseHash(href);
                                     main += (!main.match(/lang/g)) ? '?lang=' + lang : '';
                                     $(this).attr('href', (anchor && anchor !== '/') ? (main + anchor) : main);
