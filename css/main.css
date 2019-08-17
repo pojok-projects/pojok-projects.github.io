@@ -1,3 +1,7 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("bootstrap.min.css");
+@import url("mdb.min.css");
+
 #intro {
   background: url("../img/panorama-3094696_1920.jpg") no-repeat center center;
   background-size: cover;
