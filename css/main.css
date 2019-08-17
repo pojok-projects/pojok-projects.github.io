@@ -29,11 +29,9 @@
 
 .hm-gradient .full-bg-img {
   background: rgba(42, 27, 161, 0.7);
-  background: linear-gradient(
-    45deg,
-    rgba(42, 27, 161, 0.7),
-    rgba(29, 210, 177, 0.7) 100%
-  );
+  background: linear-gradient(45deg,
+      rgba(42, 27, 161, 0.7),
+      rgba(29, 210, 177, 0.7) 100%);
 }
 
 @media (max-width: 450px) {
@@ -53,4 +51,19 @@
 
 #pricing ul li {
   font-size: 1.1em;
+}
+
+strong,
+b {
+  font-weight: bold !important;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+div#sub-content {
+  padding-top: 56px;
+  min-height: calc(100% - 122px);
 }

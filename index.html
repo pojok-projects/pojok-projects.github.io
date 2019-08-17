@@ -4,32 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>pojokan.io</title>
-  <meta name="description" content="Material design landing page template built by TemplateFlip.com" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <link href="styles/main.css" rel="stylesheet">
-  <link rel="icon" href="img/icon2.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Pojokan.io</title>
+  <meta name="description"
+    content="Pojokan.io - Largest yet most efficient business oriented technology company in Indonesia" />
+  <link rel="icon" href="/img/icon2.ico">
+  <link rel="import" href="view/styles.html" />
 </head>
 
 <body id="top">
   <header>
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar">
-      <div class="container"><a class="navbar-brand" href="#"><img src="img/logo 2.png" width="130" ></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span
-            class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link active" href="#about-us">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#our-strategies">Stategies</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact-us">Contact</a></li>
-          </ul>
-        </div>
-      </div>
+    <nav data-include="nav-bar" class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar">
     </nav>
     <!-- Intro Section-->
     <section class="view hm-gradient" id="intro">
@@ -37,15 +23,7 @@
         <div class="container">
           <div class="row no-gutters">
             <div class="col-md-10 col-lg-6 text-center text-md-left margins">
-              <div class="white-text">
-                <div class="wow fadeInLeft" data-wow-delay="0.3s">
-                  <h1 class="h1-responsive font-bold mt-sm-5"><img src="img/logo 2.png" width="210" id="logo-pojokan"></h1>
-                  <div class="h6">
-                    Largest yet most efficient business oriented technology company in Indonesia
-                  </div>
-                </div><br>
-                <div class="wow fadeInLeft" data-wow-delay="0.3s"><a class="btn btn-outline-white" href="#content">Learn
-                    more</a></div>
+              <div class="white-text" data-include="mission">
               </div>
             </div>
           </div>
@@ -54,153 +32,26 @@
     </section>
   </header>
   <div id="content">
-    <section class="text-center py-5 grey lighten-4" id="about-us">
-      <div class="container">
-        <div class="wow fadeInLeft">
-          <h2 class="h1 pt-5 pb-3">What so special about us?</h2>
-          <p class="px-5 mb-5 pb-3 lead blue-grey-text">
-            We have unique preposition and strategy to super charge our delivery process
-          </p>
-        </div>
-        <div class="row">
-          <div class="col-md-4 mb-r wow fadeInUp" data-wow-delay=".4s"><i class="fa fa-line-chart fa-3x cyan-text"></i>
-            <h3 class="h4 mt-3"><a href="agile-framework.html" class="h5 mt-3">Agile Framework</a></h3>
-            <p class="mt-3 blue-grey-text">
-              Quick sprint turn within fortnightly period
-            </p>
-          </div>
-          <div class="col-md-4 mb-r wow fadeInUp" data-wow-delay=".3s"><i class="fa fa-dashboard fa-3x orange-text"></i>
-            <h3 class="h4 mt-3"><a href="continuously-integration.html" class="h5 mt-3">Continuously Integration</a>
-            </h3>
-            <p class="mt-3 blue-grey-text">
-              Deliver Fast, Fail Fast, Iterate Fast
-            </p>
-          </div>
-          <div class="col-md-4 mb-r wow fadeInUp" data-wow-delay=".5s"><i class="fa fa-cubes fa-3x red-text"></i>
-            <h3 class="h4 mt-3"><a href="continuously-delivery.html" class="h5 mt-3">Continuously Delivery</a></h3>
-            <p class="mt-3 blue-grey-text">
-              Pipeline based code delivery stream
-            </p>
-          </div>
-        </div>
-      </div>
+    <section class="text-center py-5 grey lighten-4" id="about-us" data-include="content">
     </section>
 
     <section class="py-5" id="our-strategies">
       <div class="container">
-        <div class="wow fadeIn">
-          <h2 class="text-center h1 my-4">Our strategies</h2>
-          <p class="px-5 mb-5 pb-3 lead blue-grey-text text-center">
-            We believed in the power of market influence, that's why we trust our capability to become market leader by
-            holding into the following pillars
-          </p>
+        <div class="wow fadeIn" data-include="strategies">
         </div>
     </section>
 
-    <section class="row no-gutters" id="features">
-      <div class="col-lg-3 col-md-6 col-sm-12 deep-purple lighten-1 text-white">
-        <div class="p-5 text-center wow zoomIn" data-wow-delay=".1s"><i class="fa fa-briefcase fa-2x"></i>
-          <div class="h5 mt-3"><a href="business-oriented.html" class="h5 mt-3">Business Oriented</a></div>
-          <p class="mt-5">Customisation business model</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 purple lighten-1 text-white">
-        <div class="p-5 text-center wow zoomIn" data-wow-delay=".3s"><i class="fa fa-industry fa-2x"></i>
-          <div class="h5 mt-3"><a href="advanced-technology.html" class="h5 mt-3">Advanced Technology</a></div>
-          <p class="mt-5">Cutting edge technology implementation</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 teal lighten-1 text-white">
-        <div class="p-5 text-center wow zoomIn" data-wow-delay=".5s"><i class="fa fa-users fa-2x"></i>
-          <div class="h5 mt-3"><a href="pure-indonesian.html" class="h5 mt-3">Pure Indonesian</a></div>
-          <p class="mt-5">Self managed and curated by Indonesian best talents</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 light-blue lighten-1 text-white">
-        <div class="p-5 text-center wow zoomIn" data-wow-delay=".7s"><i class="fa fa-sign-out fa-2x"></i>
-          <div class="h5 mt-3"><a href="out-of-the-box.html" class="h5 mt-3">Out of the box</a></div>
-          <p class="mt-5">Breakthough and out of the box products</p>
-        </div>
-      </div>
+    <section class="row no-gutters" id="features" data-include="vision">
     </section>
 
-    <section id="contact-us" style="background-image:url('img/panorama-3094696_1920.jpg');">
-      <div class="rgba-black-strong py-5">
-        <div class="container">
-          <div class="wow fadeIn">
-            <h2 class="h1 text-white pt-5 pb-3 text-center">Contact us</h2>
-            <p class="text-white px-5 mb-5 pb-3 lead text-center">
-              Intrique to know more about pojokan.io? Drop us a message at your convenience
-            </p>
-          </div>
-          <div class="card mb-5 wow fadeInUp" data-wow-delay=".4s">
-            <div class="card-body p-5">
-              <div class="row">
-                <div class="col-md-12">
-                  <form action="https://formspree.io/youremail@example.com" method="POST">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="md-form">
-                          <input class="form-control" id="name" type="text" name="name" required="required" />
-                          <label for="name">Your name</label>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="md-form">
-                          <input class="form-control" id="email" type="text" name="_replyto" required="required" />
-                          <label for="email">Your email</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="md-form">
-                          <input class="form-control" id="subject" type="text" name="subject" required="required" />
-                          <label for="subject">Subject</label>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="md-form">
-                          <textarea class="md-textarea" id="message" name="message" required="required"></textarea>
-                          <label for="message">Your message</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="center-on-small-only mb-4">
-                      <button class="btn btn-indigo ml-0" type="submit"><i class="fa fa-paper-plane-o mr-2"></i>
-                        Send</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section id="contact-us" style="background-image:url('img/panorama-3094696_1920.jpg');" data-include="contact-us">
     </section>
+
   </div>
-  <footer class="page-footer indigo darken-2 center-on-small-only pt-0 mt-0">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="mb-5 flex-center"><a class="px-3"><a href="https://www.facebook.com/groups/1289029927910681/"
-                target="_blank"><i class="fa fa-facebook fa-lg white-text"></i></a></div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container-fluid">
-        <p>&copy; 2019 <a href="/">pojokan.io</p>
-      </div>
-    </div>
+  <footer data-include="footer" class="page-footer indigo darken-2 center-on-small-only pt-0 mt-0">
   </footer>
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+  <link rel="import" href="view/scripts.html" />
+
 </body>
 
 </html>
