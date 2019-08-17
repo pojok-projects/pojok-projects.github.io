@@ -20,7 +20,6 @@ $(function () {
                         if (!main.match(/lang/g)) {
                             main += '?lang=' + lang;
                         }
-                        console.log(`${href} - ${main} - ${anchor}`);
                         var final = (anchor && anchor !== '/') ? (main + anchor) : main;
                         $(this).attr('href', final);
                     }
