@@ -17,25 +17,26 @@ const getUrlVars = () => {
     return vars;
 };
 
-(function () {
-    var startingTime = new Date().getTime();
+const sanitiseHash = href => href.match(/#/g) ? href.slice(0, href.indexOf('#')) : href;
+
+(() => {
     appendScript('/js/jquery-3.2.1.min.js');
     appendScript('/js/popper.min.js');
     appendScript('/js/bootstrap.min.js');
-    appendScript('/js/mdb.js');
+    appendScript('/js/mdb.min.js');
 
-    var checkReady = function (callback) {
+    var checkReady = (callback) => {
         if (window.jQuery) {
             callback(jQuery);
         } else {
-            window.setTimeout(function () {
+            window.setTimeout(() => {
                 checkReady(callback);
             }, 20);
         }
     };
 
-    checkReady(function ($) {
-        $(function () {
+    checkReady(($) => {
+        $(() => {
             setTimeout(() => {
                 new WOW().init();
             }, 1200);
@@ -47,15 +48,14 @@ const getUrlVars = () => {
 
                 jQuery.each(includes, function () {
                     const include = $(this).data('include'),
-                        suffix = !excludes.includes(include) ? (lang ? '-' + lang : '-en') : '';
-
-                    $(this).load('view/' + include + suffix + '.html', () => {
+                        suffix = sanitiseHash(!excludes.includes(include) ? (lang ? '-' + lang : '-en') : '');
+                    $(this).load(`view/${include + suffix}.html`, () => {
                         if (lang) {
                             $('a').each(function () {
                                 const href = $(this).attr('href');
                                 if (href) {
                                     const anchor = href.match('#') ? '#' + href.slice(href.indexOf('#') + 1) : null;
-                                    let main = href.match(/#/g) ? href.slice(0, href.indexOf('#')) : href;
+                                    let main = sanitiseHash(href);
                                     main += (!main.match(/lang/g)) ? '?lang=' + lang : '';
                                     $(this).attr('href', (anchor && anchor !== '/') ? (main + anchor) : main);
                                 }
