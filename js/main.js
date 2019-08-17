@@ -1,4 +1,4 @@
-new WOW().init();
+setTimeout(() => { new WOW().init(); }, 1200) 
 
 $(function () {
     var includes = $('[data-include]');
