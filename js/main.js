@@ -27,10 +27,9 @@ const getFirstAnchor = href => {
 (() => {
     appendScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js');
     appendScript('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js');
-    appendScript('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js');
     appendScript('https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js');
 
-    var checkReady = (callback) => {
+    var checkReady = callback => {
         if (window.jQuery) {
             callback(jQuery);
         } else {
@@ -40,8 +39,9 @@ const getFirstAnchor = href => {
         }
     };
 
-    checkReady(($) => {
+    checkReady($ => {
         $(() => {
+            appendScript('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js');
             setTimeout(() => {
                 new WOW().init();
             }, 1200);
