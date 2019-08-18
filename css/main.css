@@ -3,8 +3,12 @@
 @import url("mdb.min.css");
 
 #intro {
-  background: url("../img/monas.webp") no-repeat center center;
+  background: url("../img/monas.jpg") no-repeat center center;
   background-size: cover;
+}
+
+.contact-us {
+  background-image: url('../img/monas.jpg');
 }
 
 .top-nav-collapse {
