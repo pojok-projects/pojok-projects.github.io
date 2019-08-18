@@ -25,10 +25,10 @@ const getFirstAnchor = href => {
 }
 
 (() => {
-    appendScript('/js/jquery-3.2.1.min.js');
-    appendScript('/js/popper.min.js');
-    appendScript('/js/bootstrap.min.js');
-    appendScript('/js/mdb.min.js');
+    appendScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js');
+    appendScript('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js');
+    appendScript('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js');
+    appendScript('https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js');
 
     var checkReady = (callback) => {
         if (window.jQuery) {
@@ -60,7 +60,6 @@ const getFirstAnchor = href => {
                                 const href = $(this).attr('href');
                                 if (href) {
                                     const anchor = href.match('#') ? getFirstAnchor(href) : null;
-                                    console.log(anchor, 'anchorresult');
                                     let main = sanitiseHash(href);
                                     main += (!main.match(/lang/g)) ? '?lang=' + lang : '';
                                     $(this).attr('href', (anchor && anchor !== '/') ? (main + anchor) : main);
