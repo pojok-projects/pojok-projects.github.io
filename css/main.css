@@ -3,7 +3,7 @@
 @import url("mdb.min.css");
 
 #intro {
-  background: url("../img/panorama-3094696_1920.jpg") no-repeat center center;
+  background: url("../img/monas.webp") no-repeat center center;
   background-size: cover;
 }
 
@@ -43,18 +43,6 @@
     margin-right: 1rem;
     margin-left: 1rem;
   }
-}
-
-#pricing .lead {
-  opacity: 0.7;
-}
-
-#pricing .card-image {
-  background: url("../img/architecture.jpg") no-repeat center center;
-}
-
-#pricing ul li {
-  font-size: 1.1em;
 }
 
 strong,
